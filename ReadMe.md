@@ -5,7 +5,6 @@ TaskSystem is a .NET 9-based application designed to manage tasks and provide a 
 ## Features
 - **Web API**: Provides endpoints for managing movies and tasks.
 - **MongoDB Integration**: Uses MongoDB for data storage.
-- **Background Services**: Handles asynchronous tasks such as email notifications.
 - **Dockerized**: Easily deployable using Docker and Docker Compose.
 - **Swagger Integration**: API documentation and testing.
 
@@ -15,7 +14,6 @@ TaskSystem is a .NET 9-based application designed to manage tasks and provide a 
 - **Docker**
 - **AutoMapper**
 - **Entity Framework Core**
-- **FluentEmail**
 
 ## Prerequisites
 - Docker and Docker Compose installed.
@@ -39,7 +37,6 @@ TaskSystem is a .NET 9-based application designed to manage tasks and provide a 
 - **TaskSystem.Application**: Business logic and services.
 - **TaskSystem.Infrastructure**: Repository and database context.
 - **TaskSystem.Persistence**: Persistence layer for Entity Framework Core.
-- **TaskSystem.BackgroundServices**: Background services for task processing.
 
 ## Docker Setup
 - **MongoDB**: Runs on port `27017`.
