@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+    <PackageReference Include="MongoDB.Driver" Version="3.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskSystem.Application.Abstractions\TaskSystem.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\TaskSystem.Common\TaskSystem.Common.csproj" />
+    <ProjectReference Include="..\TaskSystem.Domain\TaskSystem.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

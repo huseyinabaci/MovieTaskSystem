@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: TaskSystemDb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 123456!
+    volumes:
+      - mongo-data:/data/db
+
+  webapi:
+    build:
+      context: .
+      dockerfile: TaskSystem.WebApi/Dockerfile
+    container_name: TaskSystemWebApi
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://admin:123456!@TaskSystemDb:27017"
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
